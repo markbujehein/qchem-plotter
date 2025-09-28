@@ -3,7 +3,7 @@
 A Python tool for plotting publication-quality vibrational spectra from ORCA .stk files.
 
 This script reads frequency and intensity data from ORCA's stick spectrum files
-(*.ir.stk, *.raman.stk), applies Gaussian broadening to simulate a lineshape,
+(\\*.ir.stk, \\*.raman.stk), applies Gaussian broadening to simulate a lineshape,
 and plots the resulting IR (transmittance) and Raman (intensity) spectra on a
 shared axis.
 
