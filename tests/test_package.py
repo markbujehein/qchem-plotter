@@ -1,5 +1,10 @@
 from __future__ import annotations
 
+import matplotlib as mpl
+
+# Force a non-interactive backend for Matplotlib to prevent tkinter errors in CI
+mpl.use("Agg")
+
 import importlib.metadata
 from pathlib import Path
 
