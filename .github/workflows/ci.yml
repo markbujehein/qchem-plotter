@@ -44,12 +44,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
-        runs-on:
-          [
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        runs-on: [
             ubuntu-latest,
             windows-latest,
             macos-14,
+            # We keep these in the matrix for completeness
             ubuntu-24.04-arm,
             windows-11-arm,
           ]
@@ -57,6 +57,11 @@ jobs:
         include:
           - python-version: "pypy-3.10"
             runs-on: ubuntu-latest
+
+        # Exclude job combinations that are known to be unsupported.
+        exclude:
+          - python-version: "3.10"
+            runs-on: windows-11-arm
 
     steps:
       - uses: actions/checkout@v5
