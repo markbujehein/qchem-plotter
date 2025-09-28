@@ -28,7 +28,7 @@ jobs:
           # --verbose provides detailed output in the CI logs for debugging.
           # --no-progress cleans up the log output.
           args: --verbose --no-progress '**/*.md'
-          
+
           # CRITICAL: This ensures that if lychee finds a broken link,
           # it will exit with a non-zero code, causing the CI step to fail.
           fail: true
