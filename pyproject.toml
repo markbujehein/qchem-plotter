@@ -30,7 +30,10 @@ classifiers = [
   "Typing :: Typed",
 ]
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+  "matplotlib",
+  "numpy",
+]
 
 [project.urls]
 Homepage = "https://github.com/markbujehein/qchem-plotter"
